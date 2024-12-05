@@ -4,6 +4,7 @@ using MedixProDAL.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MedixProDAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241205182931_CustomerProfile")]
+    partial class CustomerProfile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,9 +54,6 @@ namespace MedixProDAL.Migrations
                     b.Property<DateTime?>("CreatedOn")
                         .HasColumnType("datetime")
                         .HasColumnName("CreatedOn");
-
-                    b.Property<DateTime?>("DateofBirth")
-                        .HasColumnType("datetime2");
 
                     b.Property<long?>("DeletedBy")
                         .HasColumnType("bigint")

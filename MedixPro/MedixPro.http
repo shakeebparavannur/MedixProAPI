@@ -1,0 +1,6 @@
+@MedixPro_HostAddress = http://localhost:5247
+
+GET {{MedixPro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

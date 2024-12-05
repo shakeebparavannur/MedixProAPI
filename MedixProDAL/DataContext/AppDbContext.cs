@@ -17,6 +17,7 @@ namespace MedixProDAL.DataContext
         }
 
         public DbSet<Role> Roles { get; set; }
+        public DbSet<CustomerProfile>CustomerProfiles { get; set; }
         
 
     }

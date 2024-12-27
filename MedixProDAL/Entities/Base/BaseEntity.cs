@@ -11,8 +11,6 @@ namespace MedixProDAL.Entities.Base
 {
     public class BaseEntity:IEntity
     {
-       
-        
             [Key]
             [Column("Id", TypeName = "bigint")]
             [Required]
@@ -38,8 +36,5 @@ namespace MedixProDAL.Entities.Base
             [Column("IsDeleted", TypeName = "bit")]
             [Required]
             public bool IsDeleted { get; set; }
-
-            
-        
     }
 }
